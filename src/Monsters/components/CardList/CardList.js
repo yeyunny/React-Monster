@@ -3,7 +3,6 @@ import Card from "../Card/Card";
 import "./CardList.scss";
 
 function CardList({ monsterList }) {
-  console.log(typeof monsterList, monsterList);
   return (
     <div className="monsterList">
       {monsterList.map((monster) => (
