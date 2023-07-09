@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Monsters.scss";
+import CardList from "./components/CardList/CardList";
 
 function Monsters() {
   const [monsterList, setMonsterList] = useState([]);
@@ -9,11 +10,12 @@ function Monsters() {
       .then((result) => result.json())
       .then((data) => setMonsterList(data));
   }, []);
-  console.log(monsterList);
+
   return (
     <div className="monsters">
       <h1 className="title">Monsters</h1>
       <input className="search" placeholder="Search" />
+      <CardList monsterList={monsterList} />
     </div>
   );
 }
