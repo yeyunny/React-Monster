@@ -7,12 +7,7 @@ function CardList({ monsterList }) {
   return (
     <div>
       {monsterList.map((monster) => (
-        <Card
-          key={monster.id}
-          id={monster.id}
-          name={monster.name}
-          email={monster.email}
-        />
+        <Card key={monster.id} monster={monster} />
       ))}
     </div>
   );
