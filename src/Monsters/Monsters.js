@@ -11,7 +11,9 @@ function Monsters() {
     setSearch(event.target.value);
 
     const answer = monsterList.filter((monster) => {
-      return monster.name.includes(event.target.value);
+      return monster.name
+        .toUpperCase()
+        .includes(event.target.value.toUpperCase());
     });
 
     setFiltered(answer);
